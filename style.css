@@ -1031,3 +1031,275 @@ footer {
     }
 
 }
+
+/* ================================= */
+/*        ORDER SUCCESS PAGE         */
+/* ================================= */
+
+.order-success {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    text-align: center;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #16a34a;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.success-label {
+    color: #0284c7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.order-success h2 {
+    color: #111827;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.success-message {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.success-details {
+    max-width: 450px;
+    margin: 0 auto 28px;
+    padding: 18px 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.success-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+.success-details span {
+    color: #64748b;
+}
+
+.success-details strong {
+    color: #111827;
+}
+
+.continue-shopping {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.continue-shopping:hover {
+    background-color: #0284c7;
+}
+
+/* ================================= */
+/*         ORDER SUMMARY             */
+/* ================================= */
+
+.order-summary {
+    display: none;
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.order-summary.show {
+    display: block;
+}
+
+.order-summary h2 {
+    color: #111827;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-row span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.summary-row strong {
+    color: #111827;
+    font-size: 16px;
+}
+
+.summary-row.total-row {
+    border-bottom: none;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.total-row span {
+    color: #111827;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-row strong {
+    color: #0284c7;
+    font-size: 24px;
+}
+
+.place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background-color: #111827;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: #0284c7;
+}
+
+
+/* ================================= */
+/*          CART MESSAGE             */
+/* ================================= */
+
+.cart-message {
+    display: none;
+    margin: 20px 0;
+    padding: 16px 18px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    color: #166534;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cart-message.show {
+    display: block;
+}
+
+
+/* ================================= */
+/*       ORDER SUCCESS MESSAGE       */
+/* ================================= */
+
+.order-success {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #16a34a;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.success-label {
+    color: #0284c7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.order-success h2 {
+    color: #111827;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.success-message {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.success-details {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    padding: 18px 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.success-details div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.success-details span {
+    color: #64748b;
+}
+
+.success-details strong {
+    color: #111827;
+}
+
+.continue-shopping {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.continue-shopping:hover {
+    background-color: #0284c7;
+}
+

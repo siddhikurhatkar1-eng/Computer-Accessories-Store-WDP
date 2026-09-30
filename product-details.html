@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ByteWorld - Product Details</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            ByteWorld
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="offers.html">
+                Offers
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- PRODUCT DETAILS -->
+
+    <section class="product-details-page">
+
+        <div class="product-details-card">
+
+
+            <!-- PRODUCT IMAGE / ICON -->
+
+            <div class="product-detail-image">
+
+                <span id="productIcon">
+                    🖱️
+                </span>
+
+            </div>
+
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-information">
+
+                <p class="product-category">
+                    COMPUTER ACCESSORIES
+                </p>
+
+
+                <h1 id="productName">
+                    Wireless Mouse
+                </h1>
+
+
+                <div class="product-rating">
+
+                    ⭐⭐⭐⭐⭐
+
+                    <span>
+                        4.5 / 5
+                    </span>
+
+                </div>
+
+
+                <p class="product-detail-description"
+                   id="productDescription">
+
+                    Comfortable wireless mouse for everyday
+                    computer use.
+
+                </p>
+
+
+                <div class="product-detail-price"
+                     id="productPrice">
+
+                    ₹499
+
+                </div>
+
+
+                <p class="availability">
+                    ✓ In Stock
+                </p>
+
+
+                <!-- QUANTITY -->
+
+                <div class="quantity-box">
+
+                    <label for="quantity">
+                        Quantity:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        value="1"
+                        min="1"
+                        max="10">
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="product-actions">
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart()">
+
+                        Add to Cart
+
+                    </button>
+
+
+                    <button
+                        class="detail-buy-btn"
+                        onclick="buyProduct()">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="delivery-info">
+
+                    <div>
+                        🚚
+                        <strong>
+                            Fast Delivery
+                        </strong>
+
+                        <p>
+                            Delivery available on selected products.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        🔒
+                        <strong>
+                            Secure Shopping
+                        </strong>
+
+                        <p>
+                            Safe and reliable shopping experience.
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 ByteWorld. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const products = {
+
+            mouse: {
+                name: "Wireless Mouse",
+                icon: "🖱️",
+                price: "₹499",
+                description:
+                    "Comfortable wireless mouse designed for everyday computer use, study and office work."
+            },
+
+            keyboard: {
+                name: "Mechanical Keyboard",
+                icon: "⌨️",
+                price: "₹1,499",
+                description:
+                    "Durable mechanical keyboard with smooth and responsive keys for work, study and gaming."
+            },
+
+            headset: {
+                name: "Gaming Headset",
+                icon: "🎧",
+                price: "₹999",
+                description:
+                    "Gaming headset with clear sound and a comfortable design for gaming and entertainment."
+            },
+
+            monitor: {
+                name: "HD Monitor",
+                icon: "🖥️",
+                price: "₹7,999",
+                description:
+                    "Sharp and clear HD monitor suitable for work, study, entertainment and everyday computer use."
+            },
+
+            webcam: {
+                name: "Webcam",
+                icon: "📷",
+                price: "₹1,299",
+                description:
+                    "HD webcam suitable for online classes, meetings, video calls and virtual communication."
+            },
+
+            speaker: {
+                name: "USB Speaker",
+                icon: "🔊",
+                price: "₹799",
+                description:
+                    "Compact USB speakers with clear audio for your computer setup, music and entertainment."
+            }
+
+        };
+
+
+        /* GET PRODUCT FROM URL */
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+        const productType =
+            urlParams.get("product");
+
+
+        /* DISPLAY PRODUCT */
+
+        if (products[productType]) {
+
+            const product =
+                products[productType];
+
+            document.getElementById("productName")
+                .textContent = product.name;
+
+            document.getElementById("productIcon")
+                .textContent = product.icon;
+
+            document.getElementById("productPrice")
+                .textContent = product.price;
+
+            document.getElementById("productDescription")
+                .textContent = product.description;
+
+        }
+
+
+        /* ADD TO CART */
+
+        function addToCart() {
+
+            const quantity =
+                document.getElementById("quantity").value;
+
+            const product =
+                products[productType];
+
+            alert(
+                product.name +
+                " added to cart!\nQuantity: " +
+                quantity
+            );
+
+        }
+
+
+        /* BUY NOW */
+
+        function buyProduct() {
+
+            const product =
+                products[productType];
+
+            const quantity =
+                document.getElementById("quantity").value;
+
+            alert(
+                "Thank you for choosing ByteWorld!\n\n" +
+                "Product: " + product.name +
+                "\nQuantity: " + quantity +
+                "\nPrice: " + product.price
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
